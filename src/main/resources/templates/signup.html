@@ -24,57 +24,57 @@
                     <input type="text" class="form-control" id="validationServer01" field="*{firstName}"
                         name="firstName" th:classappend="${#fields.hasErrors('firstName')?'is-invalid':''}" required>
 
-                    <div th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}" class="invalid-feedback"></div>
+                    <div th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}" class="invalid-feedback">
+                    </div>
                 </div>
 
 
                 <div class="col-md-5">
                     <label for="validationServer02" class="form-label">Last name</label>
                     <input type="text" class="form-control is-valid" id="validationServer02" field="*{lastName}"
-                        name="lastName" required>
-                    <div class="valid-feedback">
-                        Looks good!
+                        name="lastName" th:classappend="${#fields.hasErrors('lastName')?'is-invalid':''}" required>
+                    <div th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" class="invalid-feedback">
                     </div>
+
                 </div>
 
                 <div class="col-md-5">
                     <label for="validationServer01" class="form-label">User name</label>
                     <input type="text" class="form-control is-valid" id="validationServerusername" field="*{userName}"
-                        name="userName" required>
-                    <div class="valid-feedback">
-                        Looks good!
+                        name="userName" th:classappend="${#fields.hasErrors('userName')?'is-invalid':''}" required>
+                    <div th:if="${#fields.hasErrors('userName')}" th:errors="*{userName}" class="invalid-feedback">
                     </div>
+
                 </div>
 
                 <div class="col-md-5">
                     <label for="validationServer05" class="form-label">email</label>
                     <input type="email" class="form-control is-invalid" id="validationServer06"
-                        aria-describedby="validationServer05Feedback" field="*{email}" name="email" required>
-                    <div id="validationServer05Feedback" class="invalid-feedback">
-                        Please provide a valid zip.
+                        aria-describedby="validationServer05Feedback" field="*{email}" name="email"
+                        th:classappend="${#fields.hasErrors('email')?'is-invalid':''}" required>
+                    <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="invalid-feedback">
                     </div>
+
                 </div>
 
                 <div class="col-md-5">
                     <label for="validationServer05" class="form-label">password</label>
                     <input type="password" class="form-control is-invalid" id="validationServer05"
-                        aria-describedby="validationServer05Feedback" field="*{password}" name="password" required>
-                    <div id="validationServer05Feedback" class="invalid-feedback">
-                        Please provide a valid zip.
+                        aria-describedby="validationServer05Feedback" field="*{password}" name="password"
+                        th:classappend="${#fields.hasErrors('password')?'is-invalid':''}" required>
+
+                    <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="invalid-feedback">
                     </div>
                 </div>
                 <br>
 
                 <div class="col-md-5">
                     <div class="form-check">
-                        <input class="form-check-input is-invalid" type="checkbox" id="invalidCheck3"
+                        <input class="form-check-input" type="checkbox" id="invalidCheck3"
                             aria-describedby="invalidCheck3Feedback" name="checkbox" required>
-                        <label class="form-check-label" for="invalidCheck3">
-                            Agree to terms and conditions
+                        <label class="form-check-label" for="autoSizingCheck2">
+                            Remember me
                         </label>
-                        <div id="invalidCheck3Feedback" class="invalid-feedback">
-                            You must agree before submitting.
-                        </div>
                     </div>
                 </div>
 

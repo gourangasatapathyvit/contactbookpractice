@@ -52,7 +52,7 @@ public class HomeController implements WebMvcConfigurer {
 
             if (checkbox == true) {
                 System.out.println("checkbox ticked");
-                // userRepo.save(user);
+                userRepo.save(user);
 
             }
             return "signup";

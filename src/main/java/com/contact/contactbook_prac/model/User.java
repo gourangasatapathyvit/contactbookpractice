@@ -1,5 +1,6 @@
 package com.contact.contactbook_prac.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -27,15 +28,18 @@ public class User {
     @NotEmpty(message = "username cannot be empty.")
     @Size(min = 5, max = 20)
     private String userName;
-
-    @Email(message = "email cannot be empty.")
+    
+    @NotEmpty(message = "username cannot be empty.")
+    @Column(unique = true)
+    @Email
     private String email;
 
     @NotEmpty(message = "password cannot be empty.")
     @Size(min = 8)
     private String password;
-
-    // private boolean checkbox;
+    
+    // @NotEmpty(message = "check box should be checked")
+    private boolean checkbox;
 
     public User() {
     }
